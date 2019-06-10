@@ -1,0 +1,10 @@
+#!/bin/bash
+
+IMAGE=paperist/alpine-texlive-ja
+
+if ! docker images | grep ${IMAGE} >/dev/null 2>&1
+then
+    docker pull ${IMAGE}
+fi
+
+docker run --rm -i -v ${PWD}:/workdir ${IMAGE} bash -c "ptex2pdf -l main.tex"

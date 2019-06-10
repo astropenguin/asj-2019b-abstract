@@ -1,0 +1,20 @@
+{
+    // latex
+    "latex-workshop.latex.recipes": [
+        {
+          "name": "docker-build",
+          "tools": [
+            "docker-build"
+          ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "docker-build",
+            "command": "bash",
+            "args": [
+                "%DIR%/etc/docker-build"
+            ]
+        },
+    ],
+}
